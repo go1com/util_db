@@ -1,5 +1,5 @@
 {
-  "name": "go1/util_core",
+  "name": "go1/util_db",
   "license": "proprietary",
   "prefer-stable": true,
   "minimum-stability": "stable",
