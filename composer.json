@@ -5,7 +5,7 @@
   "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
-      "go1\\util_db\\": "./",
+      "go1\\util_db\\": "./"
     }
   },
   "require": {
