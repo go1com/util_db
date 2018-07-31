@@ -1,0 +1,15 @@
+{
+  "name": "go1/util_core",
+  "license": "proprietary",
+  "prefer-stable": true,
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "go1\\util_db\\": "./",
+    }
+  },
+  "require": {
+    "php": "^7.1",
+    "doctrine/dbal": "^2.8.0"
+  }
+}
