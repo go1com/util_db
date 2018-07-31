@@ -2,6 +2,7 @@
   "name": "go1/util_db",
   "license": "proprietary",
   "prefer-stable": true,
+  "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
       "go1\\util_db\\": "./"
@@ -9,6 +10,7 @@
   },
   "require": {
     "php": "^7.1",
-    "go1/util": "dev-master"
+    "go1/util": "dev-master",
+    "doctrine/dbal": "^2.8.0"
   }
 }
