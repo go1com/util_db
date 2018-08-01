@@ -14,12 +14,12 @@ class DB extends ParentDB
 
     public static function bump(Connection $db, string $type)
     {
-        return self::safeThread($db, "bump:{$type}", 30, function(Connection $db) {
+        return self::safeThread($db, "bump:{$type}", 30, function(Connection $db) use ($type) {
+            $id = (int) $db->fetchColumn('SELECT MAX(id)+1 FROM gc_sequence WHERE type = ?', [$type]) ?: 1;
             $db->insert('gc_sequence', [
-                'id'   => ((int) $db->lastInsertId('gc_sequence') + 1),
-                'type' => $options['type'] ?? 'portal',
+                'id'   => $id,
+                'type' => $type,
             ]);
-            $id = $db->lastInsertId('gc_sequence');
 
             return $id;
         });
