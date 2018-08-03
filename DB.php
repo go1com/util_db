@@ -12,6 +12,7 @@ class DB extends ParentDB
     const USER          = 'user';
     const ENROLLMENT    = 'enrollment';
     const PROFILE       = 'profile';
+    const TAG           = 'tag';
 
     public static function bump(Connection $db, string $type)
     {
