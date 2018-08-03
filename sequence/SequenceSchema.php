@@ -1,6 +1,6 @@
 <?php
 
-namespace go1\util_db\sequence;
+namespace Go1\UtilDB\Sequence;
 
 use Doctrine\DBAL\Schema\Schema;
 use Doctrine\DBAL\Types\Type;

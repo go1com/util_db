@@ -1,6 +1,6 @@
 <?php
 
-namespace go1\util_db;
+namespace Go1\UtilDB;
 
 use Doctrine\DBAL\Connection;
 use go1\util\DB as UtilDB;

@@ -1,8 +1,8 @@
 <?php
 
-namespace go1\util_db\tests;
+namespace Go1\UtilDB\tests;
 
-use go1\util_db\DB;
+use Go1\UtilDB\DB;
 
 class DBTest extends UtilDBTestCase
 {
