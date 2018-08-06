@@ -1,10 +1,10 @@
 <?php
 
-namespace go1\util_db\tests;
+namespace Go1\UtilDB\tests;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\DriverManager;
-use go1\util_db\InstallTrait;
+use Go1\UtilDB\InstallTrait;
 use PHPUnit\Framework\TestCase;
 
 abstract class UtilDBTestCase extends TestCase

@@ -1,12 +1,12 @@
 <?php
 
-namespace go1\util_db;
+namespace Go1\UtilDB;
 
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Schema\Schema;
 use go1\util\DB;
 use go1\util\schema\InstallTrait as ParentInstallTrait;
-use go1\util_db\sequence\SequenceSchema;
+use Go1\UtilDB\Sequence\SequenceSchema;
 
 trait InstallTrait
 {
