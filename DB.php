@@ -3,9 +3,9 @@
 namespace go1\util_db;
 
 use Doctrine\DBAL\Connection;
-use go1\util\DB as ParentDB;
+use go1\util\DB as UtilDB;
 
-class DB extends ParentDB
+class DB extends UtilDB
 {
     const PORTAL        = 'portal';
     const LO            = 'lo';
@@ -16,7 +16,7 @@ class DB extends ParentDB
 
     public static function bump(Connection $db, string $type)
     {
-        return self::safeThread($db, "bump:{$type}", 30, function(Connection $db) use ($type) {
+        return self::safeThread($db, "bump:{$type}", 30, function (Connection $db) use ($type) {
             $id = (int) $db->fetchColumn('SELECT MAX(id)+1 FROM gc_sequence WHERE type = ?', [$type]) ?: 1;
             $db->insert('gc_sequence', [
                 'id'   => $id,
