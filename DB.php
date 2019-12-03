@@ -14,7 +14,7 @@ class DB extends UtilDB
     const PROFILE       = 'profile';
     const TAG           = 'tag';
 
-    public static function bump(Connection $db, string $type)
+    public static function bump(Connection $db, string $type): string
     {
         return self::safeThread($db, "bump:{$type}", 30, function (Connection $db) use ($type) {
             $id = (int) $db->fetchColumn('SELECT MAX(id)+1 FROM gc_sequence WHERE type = ?', [$type]) ?: 1;
