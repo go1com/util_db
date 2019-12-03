@@ -10,6 +10,7 @@ class DBTest extends UtilDBTestCase
     {
         $id = DB::bump($this->db, DB::PORTAL);
         $this->assertEquals(1, $id);
+        $this->assertEquals('{"id":"1"}', json_encode(['id' => $id]), "See GO1P-31834");
     }
 
     public function testBumpMultiple()
